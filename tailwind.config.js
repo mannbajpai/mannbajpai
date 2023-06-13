@@ -5,10 +5,13 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      logo: ['Moirai One']
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["dracula"],
+    themes: ["dracula","cupcake"],
   },
 }
 
