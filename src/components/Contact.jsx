@@ -1,9 +1,9 @@
-import React from 'react'
+import contact from "../assets/contact.jpg"
 
 const Contact = () => {
   return (
-    <div className='bg-accent w-full h-auto p-5'>
-      <div className='card bg-base-100 shadow-xl w-96 mx-20'>
+    <div className='bg-accent w-full m-0 h-auto p-5 flex md:justify-between justify-center'>
+      <div className='card bg-base-100 shadow-xl md:w-2/5 w-96 items-center text-xl'>
         <div className='pt-10 px-10'>
           <h1 className='text-neutral-content text-3xl text-center'>Connect</h1>
         </div>
@@ -22,6 +22,9 @@ const Contact = () => {
           <textarea className="textarea textarea-bordered h-24" placeholder="Type Here"></textarea>
           <input type='submit' className='btn bg-primary hover:bg-primary-focus mt-4'/>
         </div>
+      </div>
+      <div className='hidden md:flex w-1/2 bg-base-100 p-4 card'>
+        <img src={contact} alt="contact" className=' w-full'/>
       </div>
 
     </div>
