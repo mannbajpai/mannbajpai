@@ -1,4 +1,6 @@
 import contact from "../assets/contact.jpg"
+import avatar from "../assets/avatar.jpg"
+import { AiOutlineUser } from "react-icons/ai"
 
 const Contact = () => {
   return (
@@ -20,11 +22,46 @@ const Contact = () => {
             <span className="label-text">Your Message</span>
           </label>
           <textarea className="textarea textarea-bordered h-24" placeholder="Type Here"></textarea>
-          <input type='submit' className='btn bg-primary hover:bg-primary-focus mt-4'/>
+          <input type='submit' className='btn bg-primary hover:bg-primary-focus mt-4' />
         </div>
       </div>
-      <div className='hidden md:flex w-1/2 bg-base-100 p-4 card'>
-        <img src={contact} alt="contact" className=' w-full'/>
+      <div className="hidden md:flex w-1/2">
+        <div className="mockup-phone ">
+          <div className="camera"></div>
+          <div className="display">
+            <div className="artboard artboard-demo phone-1">
+              <div className="card bg- w-full h-full flex-col">
+                <div className="mt-0 px-0">
+                  <div className="navbar bg-secondary h-24 rounded justify-center">
+                    <a className="text-3xl font-semibold text-base-200 italic">My Portfolio</a>
+                  </div>
+                </div>
+                <div className="my-4 px-2 top-24 relative">
+                  <div className="chat chat-start">
+                    <div className="chat-image avatar">
+                      <div className="w-10 rounded-full">
+                        <img src={avatar} alt="me" />
+                      </div>
+                    </div>
+                    <div className="chat-bubble bg-secondary-focus">Hey!, Nice to connect, by the way are you curious how I made this?!</div>
+                  </div>
+                  <div className="chat chat-end">
+                    <div className="chat-image avatar">
+                      <div className="w-10 rounded-full">
+                        <AiOutlineUser size={40} className="bg-secondary" />
+                      </div>
+                    </div>
+                    <div className="chat-bubble bg-secondary-focus">Not a big deal, but show me.</div>
+                  </div>
+                  <div className="top-12 relative left-12 right-12">
+                    <button className="btn btn-accent btn-lg rounded-full">Check the Code</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>

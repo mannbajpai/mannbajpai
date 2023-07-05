@@ -1,4 +1,5 @@
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs"
+import {SiHashnode} from "react-icons/si"
 
 const Footer = () => {
   return (
@@ -13,6 +14,7 @@ const Footer = () => {
           <BsGithub size={30} />
           <BsTwitter size={30} />
           <BsLinkedin size={30} />
+          <SiHashnode size={30} />
         </div>
       </div>
       <div>
