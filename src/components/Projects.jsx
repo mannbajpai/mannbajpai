@@ -2,7 +2,7 @@ const Projects = () => {
   return (
     <div className='bg-accent'>
       <h1 className='text-accent-content text-5xl p-4 text-center font-bold'>Projects</h1>
-      <div className='grid grid-cols-2 m-0 p-4'>
+      <div className='grid md:grid-cols-2 grid-cols-1 m-0 p-4'>
         <div className="card w-auto bg-base-100 shadow-xl m-1">
           <figure className="px-10 pt-10">
             <img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Spotify NextJs" className="rounded-xl" />
