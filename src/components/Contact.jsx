@@ -1,29 +1,50 @@
-import contact from "../assets/contact.jpg"
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import avatar from "../assets/avatar.jpg"
 import { AiOutlineUser } from "react-icons/ai"
+import toast from 'react-hot-toast';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_zau5jqa', 'template_5fk46qv', form.current, {
+        publicKey: 'HEr0KPooGdGU9Ciw9',
+      })
+      .then(
+        () => {
+          toast.success("Email sent successfully.")
+        },
+        (error) => {
+          toast.error(error.message);
+        },
+      );
+  };
   return (
-    <div className='bg-accent w-full m-0 h-auto p-5 flex md:justify-between justify-center'>
+    <div id="contact" className='bg-accent w-full m-0 h-auto p-5 flex md:justify-between justify-center'>
       <div className='card bg-base-100 shadow-xl md:w-2/5 w-96 items-center text-xl'>
         <div className='pt-10 px-10'>
           <h1 className='text-neutral-content text-3xl text-center'>Connect</h1>
         </div>
-        <div className="form-control w-full max-w-xs ml-4 py-4">
+
+        <form className="form-control w-full max-w-xs ml-4 py-4" ref={form} onSubmit={sendEmail}>
           <label className="label my-4">
             <span className="label-text">What is your name?</span>
           </label>
-          <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+          <input type="text" name="user_name" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
           <label className="label my-4">
             <span className="label-text">What is your email?</span>
           </label>
-          <input type="email" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+          <input type="email" name="user_email" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
           <label className="label my-4">
             <span className="label-text">Your Message</span>
           </label>
-          <textarea className="textarea textarea-bordered h-24" placeholder="Type Here"></textarea>
-          <input type='submit' className='btn bg-primary hover:bg-primary-focus mt-4' />
-        </div>
+          <textarea name="message" className="textarea textarea-bordered h-24" placeholder="Type Here"></textarea>
+          <input type='submit' value="Send" className='btn bg-primary hover:bg-primary-focus mt-4' />
+        </form>
       </div>
       <div className="hidden md:flex w-1/2">
         <div className="mockup-phone ">
@@ -54,7 +75,9 @@ const Contact = () => {
                     <div className="chat-bubble bg-secondary-focus">Not a big deal, but show me.</div>
                   </div>
                   <div className="top-12 relative left-12 right-12">
-                    <button className="btn btn-accent btn-lg rounded-full">Check the Code</button>
+                    <a href='https://github.com/mannbajpai/mannbajpai' target='_blank' rel='noreferrer'>
+                      <button className="btn btn-accent btn-lg rounded-full">Check the Code</button>
+                    </a>
                   </div>
                 </div>
 
