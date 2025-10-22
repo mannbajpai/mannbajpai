@@ -1,13 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: 'Poppins', sans-serif;
-    }
+  :root {
+    /* Custom CSS Variables for Design Tokens */
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --gradient-secondary: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    --gradient-accent: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    --shadow-soft: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+    --shadow-medium: 0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-strong: 0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 4px 25px -5px rgba(0, 0, 0, 0.1);
+    --border-radius-card: 1rem;
+    --border-radius-button: 0.75rem;
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  [data-theme="dark"] {
+    --gradient-secondary: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    font-variation-settings: 'opsz' 32;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-base-200;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary-focus;
+  }
+}
+
+@layer components {
+  /* Custom component classes */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-accent text-white border-0 hover:shadow-medium transition-all duration-300 hover:scale-105;
+  }
+
+  .card-modern {
+    @apply bg-base-100 rounded-2xl shadow-soft border border-base-200 hover:shadow-medium transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-section px-4 md:px-8 lg:px-16;
+  }
+
+  .section-padding-sm {
+    @apply py-section-sm px-4 md:px-8 lg:px-16;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .heading-primary {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-base-content mb-6;
+  }
+
+  .heading-secondary {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold text-base-content mb-4;
+  }
+
+  .heading-tertiary {
+    @apply text-xl md:text-2xl font-medium text-base-content mb-3;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg text-base-content/80 leading-relaxed;
+  }
+
+  .text-small {
+    @apply text-sm md:text-base text-base-content/70;
+  }
+
+  .badge-tech {
+    @apply badge badge-outline badge-primary text-xs font-medium px-3 py-1;
+  }
+
+  .badge-category {
+    @apply badge badge-secondary text-xs font-semibold px-4 py-2;
+  }
 }

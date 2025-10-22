@@ -1,0 +1,79 @@
+export const personalInfo = {
+  name: "Mann Bajpai",
+  title: "Full-Stack Developer & AI Enthusiast",
+  description: "Mann Bajpai is a passionate full-stack developer and AI enthusiast from India, specializing in building innovative applications and websites. Explore his portfolio, projects, and experience.",
+  keywords: "Mann Bajpai, full-stack developer, AI enthusiast, React, Node.js, Python, portfolio, software engineer",
+  ogTitle: "Mann Bajpai - Full-Stack Developer & AI Enthusiast",
+  ogDescription: "Passionate developer creating innovative applications. Explore my portfolio and connect!",
+  ogUrl: "https://mannbajpai.dev",
+  twitterCard: "summary_large_image",
+  typewriterStrings: ['Hello! I\'m Mann', 'Full-Stack Developer', 'AI Enthusiast', 'Problem Solver'],
+  bio: "I'm a passionate full-stack developer and AI enthusiast from India, with expertise in building scalable web applications and AI-powered solutions. I love turning complex problems into simple, beautiful, and intuitive solutions.",
+  location: "India",
+  email: "mannbajpai.grs@gmail.com", 
+  resume: "../assets/resume.pdf",
+  avatar: "../assets/avatar.jpg"
+};
+
+export const socialLinks = {
+  github: "https://github.com/mannbajpai",
+  linkedin: "https://linkedin.com/in/mannbajpai",
+  twitter: "https://twitter.com/mannbajpai",
+  email: "mailto:mannbajpai.grs@gmail.com"
+};
+
+export const projects = [
+  {
+    title: "KhaataFlow",
+    description: "A comprehensive expense management application with group expense splitting capabilities, built with modern web technologies and deployed on AWS infrastructure.",
+    longDescription: "Engineered a full-stack expense management application with RESTful API architecture and responsive frontend design. Implemented secure user authentication system using JWT tokens, bcrypt password hashing, and role-based access control. Designed and normalized PostgreSQL database schema for efficient expense tracking and group expense splitting. Deployed application on AWS using EC2, RDS, and S3, with CloudFront CDN for optimized content delivery.",
+    techStack: ["Node.js", "Express", "React", "PostgreSQL", "TailwindCSS", "AWS", "JWT", "bcrypt"],
+    githubLink: "https://github.com/mannbajpai/khaataflow",
+    liveLink: null,
+    category: "Full-Stack",
+    featured: true
+  },
+  {
+    title: "CVLens",
+    description: "An AI-powered resume analysis tool that provides actionable feedback and ATS compatibility scores to maximize hiring potential.",
+    longDescription: "Engineered an AI-powered engine to deliver actionable, job-specific resume feedback, generating precise ATS compatibility scores to maximize hiring potential. Architected a secure, serverless authentication and data management system for persistent tracking of resume analysis and user feedback history.",
+    techStack: ["React", "TypeScript", "TailwindCSS", "Zustand", "Puter.js", "AI/ML"],
+    githubLink: null,
+    liveLink: "https://cvlens.netlify.app/",
+    category: "AI/ML",
+    featured: true
+  },
+  {
+    title: "Autonomous AI Agents",
+    description: "Dual autonomous AI agents for web research and financial analysis, featuring custom RAG pipeline with 90% accuracy.",
+    longDescription: "Developed dual autonomous AI agents using LangChain for complex web research and AI-driven financial analysis for generating stock recommendations. Architected a custom RAG pipeline with Pinecone, achieving a 90% accuracy. Slashed LLM inference time by 40% through advanced prompt engineering.",
+    techStack: ["Python", "LangChain", "Groq", "FastAPI", "phidata", "Pinecone", "RAG"],
+    githubLink: "https://github.com/mannbajpai/autonoumous-ai-agents",
+    liveLink: null,
+    category: "AI/ML",
+    featured: false
+  }
+  // Add more projects as needed
+];
+
+export const experiences = [
+  // Add internship/experience data here
+  // Example:
+  // {
+  //   company: "Company Name",
+  //   position: "Position Title",
+  //   duration: "Start - End",
+  //   description: "Description of role and achievements",
+  //   technologies: ["Tech1", "Tech2"]
+  // }
+];
+
+export const education = [
+  // Add education data
+];
+
+export const contactInfo = {
+  email: "mannbajpai.grs@gmail.com",
+  phone: "+91-9305771332",
+  location: "Bangalore, India"
+};
